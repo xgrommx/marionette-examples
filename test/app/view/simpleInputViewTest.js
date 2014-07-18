@@ -1,5 +1,5 @@
 /**
- * Tests basic view and model interactions
+ * Created by nrheckman on 7/18/14.
  */
 
 /**

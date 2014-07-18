@@ -1,8 +1,8 @@
 /**
  * Created by nrheckman on 7/16/14
  */
-define([ "jquery", "backbone", "marionette", 'view/SimpleInputView' ], function(
-	$, Backbone, Marionette, InputView ) {
+define([ "jquery", "backbone", "marionette", 'view/SimpleInputCollectionView' ], function(
+	$, Backbone, Marionette, InputCollectionView ) {
 
 	console.log("Setting up app");
 
@@ -20,14 +20,13 @@ define([ "jquery", "backbone", "marionette", 'view/SimpleInputView' ], function(
 
 	// On startup, initialize to a particular view
 	myApp.addInitializer(function(options){
-		var inputView = new InputView({ 'model' : options.input });
-		myApp.mainContent.show(inputView);
+		console.log("Initializing");
+		myApp.mainContent.show(new InputCollectionView({ 'collection' : options.inputs }));
 	});
 
 	// Turn on history management
 	myApp.on("start", function(){
 		if(Backbone.history){
-			console.log("Starting history");
 			Backbone.history.start();
 		}
 	});

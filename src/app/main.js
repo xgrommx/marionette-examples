@@ -1,14 +1,14 @@
 /**
  * Created by nrheckman on 7/16/14.
  */
-require([ 'router/Application', 'model/InputModel' ], function( app, InputModel ) {
-	var anInput = new InputModel({
-		//'name' : 'default',
-		'value' : 'Default Value',
-		'label' : 'Your text:'
-	});
+require([ 'router/Application', 'collection/InputCollection' ], function( app, InputCollection ) {
+	var inputs = new InputCollection([
+		{ 'label' : 'Your text:' },
+		{ 'label' : 'More text:' },
+		{ 'label' : 'Defaulted:', 'value' : 'Some default value' }
+	]);
 
 	app.start({
-		'input' : anInput
+		'inputs' : inputs
 	});
 });

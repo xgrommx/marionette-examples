@@ -20,7 +20,13 @@
 <body>
 	<div id="mocha"></div>
 	<script>
-		require(['test/main'], function() {
+		/**
+		 * List test specs to be included and executed below
+		 */
+		require([
+			'test/view/simpleInputViewTest',
+			'test/view/simpleInputCollectionViewTest'
+		], function() {
 			mocha.run();
 		});
 	</script>

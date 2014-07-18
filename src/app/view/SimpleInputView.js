@@ -3,7 +3,7 @@
  */
 define([ 'marionette', 'tpl!template/InputTemplate.tpl' ], function(Marionette, template) {
 	return Marionette.ItemView.extend({
-		tagName: "span",
+		tagName: "li",
 		template: template
 	});
 });
