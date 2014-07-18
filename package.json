@@ -1,0 +1,11 @@
+{
+  "name": "reactive-examples",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-requirejs": "latest",
+    "grunt-mocha": "latest",
+    "grunt-contrib-watch": "latest"
+  }
+}
