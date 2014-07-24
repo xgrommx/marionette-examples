@@ -1,8 +1,8 @@
 /**
  * Created by nrheckman on 7/16/14
  */
-define([ "jquery", "backbone", "marionette", 'view/SimpleInputCollectionView' ], function(
-	$, Backbone, Marionette, InputCollectionView ) {
+define([ "backbone", "marionette", 'router/ApplicationRouter', 'router/RouteController' ], function(
+		Backbone, Marionette, ApplicationRouter, RouteController ) {
 
 	console.log("Setting up app");
 
@@ -21,7 +21,7 @@ define([ "jquery", "backbone", "marionette", 'view/SimpleInputCollectionView' ],
 	// On startup, initialize to a particular view
 	myApp.addInitializer(function(options){
 		console.log("Initializing");
-		myApp.mainContent.show(new InputCollectionView({ 'collection' : options.inputs }));
+		new ApplicationRouter({ 'controller' : new RouteController(myApp, options) });
 	});
 
 	// Turn on history management
