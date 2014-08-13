@@ -1,1 +1,1 @@
-#Testing and experimentation project for reactive programing with javascript
+#Testing and experimentation project with marionette and backbone
